@@ -2,14 +2,39 @@
 
 import React from "react";
 import { FolderTree } from "./ui/folder-tree";
+import LightRays from "./ui/aurora";
+import { useTheme } from "./ThemeProvider";
 
 export default function HighLevelRepurposing() {
+  const { theme } = useTheme();
+  
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-black">
-      <div className="w-full max-w-[1600px] mx-auto h-full flex flex-col justify-center">
+    <section className={`relative min-h-screen w-full flex items-center justify-center py-20 px-6 transition-colors duration-300 ${
+      theme === 'dark' ? 'bg-gray-900' : 'bg-white'
+    } overflow-hidden`}>
+      {/* LightRays Background */}
+      <div className="absolute inset-0 z-0">
+        <LightRays 
+          raysOrigin="top-center"
+          raysColor="#FFF"
+          raysSpeed={0.8}
+          lightSpread={1.2}
+          rayLength={2.5}
+          pulsating={false}
+          fadeDistance={1.2}
+          saturation={1.0}
+          followMouse={true}
+          mouseInfluence={0.15}
+          noiseAmount={0.1}
+          distortion={0.2}
+        />
+      </div>
+      <div className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center relative z-10">
         {/* Header */}
-        <div className="mb-8 md:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 md:mb-4" style={{ fontFamily: 'var(--font-family-serif)' }}>
+        <div className="mb-12">
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 md:mb-4 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-white' : 'text-gray-900'
+          }`} style={{ fontFamily: 'var(--font-family-serif)' }}>
             High Level <span className="text-yellow-400">Repurposing</span>
             <span className="inline-block ml-2 align-middle">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 md:w-8 md:h-8">
@@ -17,7 +42,9 @@ export default function HighLevelRepurposing() {
               </svg>
             </span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl" style={{ fontFamily: 'var(--font-family-sans)' }}>
+          <p className={`text-base sm:text-lg md:text-xl max-w-3xl transition-colors duration-300 ${
+            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+          }`} style={{ fontFamily: 'var(--font-family-sans)' }}>
             We build bulletproof content flywheels for personal brands to grow on multiple platforms with high volume of content
           </p>
         </div>
@@ -111,7 +138,9 @@ export default function HighLevelRepurposing() {
           
           {/* Bottom text */}
           <div className="text-center mt-12">
-            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto" style={{ fontFamily: 'var(--font-family-sans)' }}>
+            <p className={`text-sm md:text-base max-w-2xl mx-auto transition-colors duration-300 ${
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+            }`} style={{ fontFamily: 'var(--font-family-sans)' }}>
               Your content organized and distributed across all platforms automatically
             </p>
           </div>

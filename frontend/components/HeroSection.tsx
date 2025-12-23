@@ -7,8 +7,8 @@ import FloatingBadge from "./FloatingBadge";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-12 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
+    <section className="relative min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
         {/* Left Side: Text Content */}
         <div className="space-y-6 text-center lg:text-left relative z-10">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-family-serif)' }}>

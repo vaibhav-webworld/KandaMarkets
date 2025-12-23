@@ -1,8 +1,11 @@
 "use client";
 
 import React from "react";
+import { useTheme } from "./ThemeProvider";
 
 export default function CuratedContent() {
+  const { theme } = useTheme();
+  
   const videos = [
     {
       id: 1,
@@ -31,11 +34,15 @@ export default function CuratedContent() {
   ];
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-black">
-      <div className="w-full max-w-[1600px] mx-auto h-full flex flex-col justify-center">
+    <section className={`relative min-h-screen w-full flex items-center justify-center py-20 px-6 transition-colors duration-300 ${
+      theme === 'dark' ? 'bg-gray-900' : 'bg-white'
+    }`}>
+      <div className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center">
         {/* Header */}
-        <div className="mb-8 md:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 md:mb-4" style={{ fontFamily: 'var(--font-family-serif)' }}>
+        <div className="mb-12">
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 md:mb-4 transition-colors duration-300 ${
+            theme === 'dark' ? 'text-white' : 'text-gray-900'
+          }`} style={{ fontFamily: 'var(--font-family-serif)' }}>
             Curated <span className="text-yellow-400">short form</span> content
             <span className="inline-block ml-2 align-middle">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 md:w-8 md:h-8">
@@ -43,7 +50,9 @@ export default function CuratedContent() {
               </svg>
             </span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl" style={{ fontFamily: 'var(--font-family-sans)' }}>
+          <p className={`text-base sm:text-lg md:text-xl max-w-3xl transition-colors duration-300 ${
+            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+          }`} style={{ fontFamily: 'var(--font-family-sans)' }}>
             We help with creative direction and/or ideate, script and post produce.
           </p>
         </div>
