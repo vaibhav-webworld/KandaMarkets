@@ -12,12 +12,12 @@ export default function HeroSection() {
         {/* Left Side: Text Content */}
         <div className="space-y-6 text-center lg:text-left relative z-10">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-family-serif)' }}>
-            Discover the art of{" "}
+            Helping Brands Dominate Their Market as The Go-To Authority.{" "}
             <span className="italic">strategy</span>
           </h1>
           
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0" style={{ fontFamily: 'var(--font-family-sans)' }}>
-            Join a community of creative strategists and build your portfolio with elegant, data-driven solutions.
+            We scale your personal brand with world-class organic content and strategic systems. Focus on your business while we make you the most recognized name in your industry. Call to Action Button: Book Your Free Strategy Call (It’s Free!)
           </p>
 
           {/* CTA Buttons */}
