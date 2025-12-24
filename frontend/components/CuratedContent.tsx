@@ -43,7 +43,7 @@ export default function CuratedContent() {
           <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 md:mb-4 transition-colors duration-300 ${
             theme === 'dark' ? 'text-white' : 'text-gray-900'
           }`} style={{ fontFamily: 'var(--font-family-serif)' }}>
-            Curated <span className="text-yellow-400">short form</span> content
+            Precision-Engineered <span className="text-yellow-400">Short Form</span> Content
             <span className="inline-block ml-2 align-middle">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 md:w-8 md:h-8">
                 <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
